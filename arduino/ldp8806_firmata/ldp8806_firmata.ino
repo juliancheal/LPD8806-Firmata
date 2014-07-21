@@ -1,24 +1,12 @@
 #include <Firmata.h>
 
-#if MAX_DATA_BYTES < 64
-#error "Firmata.h: MAX_DATA_BYTES should be increased to 64"
-#endif
-
-
-/**
-
-TODO: 
-
-2. From there make it configurable so the constructor is called off a construction
-method so that it can be determined. Look at using a proper SYSEX message for this
-
-**/
-#include "LPD8806.h"
+#include "LPD8806_Wrapper.h"
+#include "SPI.h"
 
 
 void setup() {
     firmataInitialize();
-    ws2812_initialise();
+    lpd8806_initialise();
 }
 
 void loop() {
