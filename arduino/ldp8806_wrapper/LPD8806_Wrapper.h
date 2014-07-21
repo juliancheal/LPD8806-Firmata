@@ -1,15 +1,15 @@
 /**
  *
- * This the ws2812 library used for the various examples
+ * This the LPD8806 library used for the various examples
  *
  * Most of its job is to parse messages correctly and hand off to the 
  * Adafruit library for more serious tasking.
  *
- * You'll need to call ws2812_initialise() to begin with so it sets up
+ * You'll need to call lpd8806_initialise() to begin with so it sets up
  * the strip appropriately
  *
  */
-
+ 
 #ifndef LPD8806_h
 #define LPD8806_h
 
@@ -27,3 +27,4 @@ void parse_message(String& message, int message_start);
 
 
 #endif
+
