@@ -15,7 +15,7 @@ void loop() {
         Firmata.processInput();
     }
 
-    delay(1);
+    // delay(1);
 }
 
 #define QUERY_FIRMWARE  0x79
@@ -33,7 +33,6 @@ void firmataInitialize(void) {
 void firmataStringCallback(char *string) {
 
     String message = String(string);
-
     // now we have a message, let's parse it.
     int msg_index = message.lastIndexOf('{');
     if (msg_index >= 0) {
