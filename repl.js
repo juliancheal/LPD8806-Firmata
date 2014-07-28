@@ -1,7 +1,6 @@
 var firmata = require("firmata");
 var repl = require("repl");
 
-// var serialport = "/dev/ttyUSB0";
 var serialport = "/dev/tty.usbserial-A600aeYe";
 var board = new firmata.Board(serialport, function (error) {
 if (error) {
