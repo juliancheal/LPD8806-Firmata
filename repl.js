@@ -1,13 +1,12 @@
 var firmata = require("firmata");
 var repl = require("repl");
 
-// var serialport = "/dev/ttyUSB0";
 var serialport = "/dev/tty.usbserial-A600aeYe";
 var board = new firmata.Board(serialport, function (error) {
-if (error) {
-  console.log(error);
-  return;
-}
+  if (error) {
+    console.log(error);
+    return;
+  }
 
   console.log('Connected to ' + serialport);
   console.log('Firmware: ' +
@@ -24,7 +23,7 @@ if (error) {
   context.animation = animation;
   context.rainbow = rainbow;
   context.animation2 = animation2;
-
+  
   board.on('string', function(data) {
     var message = '';
 

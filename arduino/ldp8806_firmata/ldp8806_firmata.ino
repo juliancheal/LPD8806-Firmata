@@ -38,6 +38,7 @@ void firmataStringCallback(char *string) {
     if (msg_index >= 0) {
         parse_message(message, msg_index);
     }
+    Serial.print(message);
     // Firmata bug: SysEx STRING_DATA handler uses malloc(), but not free()
     // https://github.com/firmata/arduino/issues/74
 
