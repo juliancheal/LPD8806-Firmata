@@ -22,16 +22,18 @@
 #define STRIP_LENGTH 32
 #define BUFLENGTH 32
 
-void lpd8806_initialise();
-void parse_message(String& message, int message_start);
+void
+ lpd8806_initialise();
+ parse_message(String& message, int message_start);
+ setPixelColor(uint16_t n, uint8_t r, uint8_t g, uint8_t b);
+ setPixelColor(uint16_t n, uint32_t c);
+ show(void);
 
-void setPixels(uint8_t pos, uint32_t colour);
-void rainbow(uint8_t wait);
-void rainbowCycle(uint8_t wait);
-void colorWipe(uint32_t c, uint8_t wait);
-void colorChase(uint32_t c, uint8_t wait);
-void theaterChase(uint32_t c, uint8_t wait);
-void theaterChaseRainbow(uint8_t wait);
-uint32_t Wheel(uint16_t WheelPos);
+uint16_t
+  numPixels(void);
+uint32_t
+  Color(byte, byte, byte),
+  getPixelColor(uint16_t n);
+
 
 #endif
